@@ -1,15 +1,16 @@
 class Application 
     def call(env)
-        respons = Rack::Response.new
+        resp = Rack::Response.new
         
         morning = 'Good Morning'
         afternoon = 'Good Afternoon'
 
 
-
+        
         resp.write "#{morning}"
         resp.write "#{afternoon}"
-         if morning == Time.now ()
+        
+        if morning == Time.now 
             morning 
          else 
             afternoon 
